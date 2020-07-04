@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.wrallee</groupId>
-    <artifactId>spring-boot-holoman</artifactId>
+    <artifactId>spring-boot-02-holoman</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
