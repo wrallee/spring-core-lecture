@@ -1,5 +1,7 @@
 package me.wrallee;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -25,6 +27,9 @@ public class SampleRunner implements ApplicationRunner {
     @Autowired
     private String hello;
 
+    //======Logger======
+    private Logger logger = LoggerFactory.getLogger(SampleRunner.class);
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("==Using .properties directly==");
@@ -39,5 +44,10 @@ public class SampleRunner implements ApplicationRunner {
 
         System.out.println("=======Profile=======");
         System.out.println(hello);
+
+        System.out.println("=======Logger=======");
+        logger.debug(hello);
+        logger.debug(myProperties.getName());
+        logger.debug(myProperties.getFullName());
     }
 }
